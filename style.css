@@ -11,3 +11,19 @@
     --turquoise: #06dcd5ff;
     --tropical-mint: #14ddacff;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(90deg, var(--azure-blue), var(--tropical-mint));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
