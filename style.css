@@ -20,10 +20,40 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(90deg, var(--azure-blue), var(--tropical-mint));
+    animation: change 20s infinite;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+@keyframes change {
+    0% {
+        background-color: var(--azure-blue);
+    }
+    50% {
+        background-color: var(--tropical-mint);
+    }
+    100% {
+        background-color: var(--azure-blue);
+    }
+}
+
+#animation {
+    animation: zoom 10s ease-in-out forwards;
+    transform-origin: center;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(5);
+        opacity: 0;
+        visibility: hidden;
+    }
 }
