@@ -26,6 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 @keyframes change {
@@ -41,6 +42,7 @@ body {
 }
 
 #animation {
+    position: absolute;
     animation: zoom 10s ease-in-out forwards;
     transform-origin: center;
 }
@@ -55,5 +57,47 @@ body {
         transform: scale(5);
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+.discover {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: button 1s ease-out 10s forwards;
+    background: transparent;
+    border: 2px solid white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discover a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.discover:hover {
+    background: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.discover:hover a {
+    color: var(--azure-blue);
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
